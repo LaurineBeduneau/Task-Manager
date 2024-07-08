@@ -1,11 +1,11 @@
-case class Task(id: Int, description: String, tags: List[String])
+case class TaskTag(id: Int, description: String, tags: List[String])
 
-class TaskManager {
-  private var tasks = List[Task]()
+class TaskManagerTag {
+  private var tasks = List[TaskTag]()
 
   def addTask(description: String, tags: List[String]): Unit = {
     val nextId = tasks.size + 1
-    val newTask = Task(nextId, description, tags)
+    val newTask = TaskTag(nextId, description, tags)
     tasks = tasks :+ newTask
     println(s"Tâche ajoutée : [${newTask.id}] ${newTask.description} - Tags : ${newTask.tags.mkString(", ")}")
   }

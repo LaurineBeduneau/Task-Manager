@@ -1,3 +1,5 @@
-package com.example
+package com.task1
 
-case class Task(id: Int, description: String)
+import java.time.LocalDate
+
+case class TaskOne(id: Int, description: String, dueDate: Option[LocalDate] = None)
